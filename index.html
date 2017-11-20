@@ -1,0 +1,40 @@
+<!-- Simple search form that allows the user to search YouTube videos. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" width="device=device-width">
+    <meta name="keywords" content="search youtube", "search videos">
+    <meta name="description" content="Simple search for YouTube videos">
+    <meta name="robots" content="all">
+    <meta name="author" content="Margaret Blauvelt">
+    <title>Search for YouTube Videos</title>
+    <!-- wireframing: See MetaFrame https://github.com/elliance/metaframe/-->
+    <link rel="stylesheet" href="css/metaframe.css" />
+    <link rel="stylesheet" href="css/fixmf.css" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- <header role="banner">
+      <h1></h1>
+      <h2></h2>
+    </header> -->
+    <main role="main">
+      <h1>Search for Videos at YouTube</h1>
+      <form action="#" method="post" id="js-search" class="notation" note="Should method be post?">
+        <label for="search-words">Enter your search:</label>
+        <input type="text" id="search-words" placeholder="search words (keywords, title)" required>
+        <button type="submit" name="submit" id="submit-button"></button>
+      </form>
+      <div class="js-results" class="notification" note="Hidden until results come in. Nice to have a little swirly thing while we wait.">
+        <h2>Results</h2>
+        <ul id="results">
+        </ul>
+      </div>
+    </main>
+    <!-- <footer role="contentinfo">
+      <address class=""></address>
+      <summary>&copy; 2017 Margaret Blauvelt</summary>
+    </footer> -->
+  </body>
+</html>
