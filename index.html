@@ -10,8 +10,8 @@
     <meta name="author" content="Margaret Blauvelt">
     <title>Search for YouTube Videos</title>
     <!-- wireframing: See MetaFrame https://github.com/elliance/metaframe/-->
-    <link rel="stylesheet" href="stylesheets/metaframe.css" />
-    <link rel="stylesheet" href="stylesheets/fixmf.css" />
+    <!-- <link rel="stylesheet" href="stylesheets/metaframe.css" />
+    <link rel="stylesheet" href="stylesheets/fixmf.css" /> -->
     <link rel="stylesheet" href="float-grid.css">
     <link rel="stylesheet" href="screen.css">
   </head>
@@ -24,81 +24,80 @@
       <h1>Search for Videos at YouTube</h1>
       <form action="#" method="post" id="js-search" class="notation" note="Should method be post?">
         <label for="search-words">Enter your search:</label>
-        <input type="text" id="search-words" placeholder="search words (keywords, title)" required>
+        <input type="text" id="search-words" name="search-words" class="js-search-words" placeholder="search words (keywords, title)" required>
         <button type="submit" name="submit" id="submit-button">Search</button>
       </form>
-      <div class="js-results" class="notification" note="Hidden until results come in. Nice to have a little swirly thing while we wait.">
+      <div class="js-result-area" class="notification" note="Hidden until results come in. Nice to have a little swirly thing while we wait.">
         <h2>Results</h2>
-        <div class="row">
-          <div class="col-2">
-            <div class="box orange">2 columns</div>
+        <div class="js-results">
+          <div class="row">
+            <div class="col-2">
+              <div class="box orange">2 columns</div>
+            </div>
+            <div class="col-2">
+              <div class="box blue">2 columns</div>
+            </div>
+            <div class="col-2">
+              <div class="box green">2 columns</div>
+            </div>
+            <div class="col-2">
+              <div class="box black">2 columns</div>
+            </div>
+            <div class="col-2">
+              <div class="box black">2 columns</div>
+            </div>
+            <div class="col-2">
+              <div class="box black">2 columns</div>
+            </div>
           </div>
-          <div class="col-2">
-            <div class="box blue">2 columns</div>
-          </div>
-          <div class="col-2">
-            <div class="box green">2 columns</div>
-          </div>
-          <div class="col-2">
-            <div class="box black">2 columns</div>
-          </div>
-          <div class="col-2">
-            <div class="box black">2 columns</div>
-          </div>
-          <div class="col-2">
-            <div class="box black">2 columns</div>
-          </div>
-        </div>
 
 
-        <div class="row">
-          <div class="col-3">
-            <div class="box orange">3 columns</div>
+          <div class="row">
+            <div class="col-3">
+              <div class="box orange">3 columns</div>
+            </div>
+            <div class="col-3">
+              <div class="box blue">3 columns</div>
+            </div>
+            <div class="col-3">
+              <div class="box green">3 columns</div>
+            </div>
+            <div class="col-3">
+              <div class="box black">3 columns</div>
+            </div>
           </div>
-          <div class="col-3">
-            <div class="box blue">3 columns</div>
-          </div>
-          <div class="col-3">
-            <div class="box green">3 columns</div>
-          </div>
-          <div class="col-3">
-            <div class="box black">3 columns</div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <div class="box pink">4 columns wide</div>
+          <div class="row">
+            <div class="col-4">
+              <div class="box pink">4 columns wide</div>
+            </div>
+            <div class="col-4">
+              <div class="box turquoise">4 columns wide</div>
+            </div>
+            <div class="col-4">
+              <div class="box gold">4 columns wide</div>
+            </div>
           </div>
-          <div class="col-4">
-            <div class="box turquoise">4 columns wide</div>
-          </div>
-          <div class="col-4">
-            <div class="box gold">4 columns wide</div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-6">
-            <div class="box gray">6 columns wide</div>
+          <div class="row">
+            <div class="col-6">
+              <div class="box gray">6 columns wide</div>
+            </div>
+            <div class="col-6">
+              <div class="box purple">6 columns wide</div>
+            </div>
           </div>
-          <div class="col-6">
-            <div class="box purple">6 columns wide</div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-12">
-            <div class="box silver">12 columns wide</div>
+          <div class="row">
+            <div class="col-12">
+              <div class="box silver">12 columns wide</div>
+            </div>
           </div>
         </div>
       </div>
     </main>
-    <!-- <footer role="contentinfo">
-      <address class=""></address>
-      <summary>&copy; 2017 Margaret Blauvelt</summary>
-    </footer> -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js\metaframe-1.2.0.min.js"></script>
+    <!-- <script src="js/metaframe-1.2.0.min.js"></script> -->
+    <script src="search-youtube.js"></script>
   </body>
 </html>
