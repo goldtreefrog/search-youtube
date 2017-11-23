@@ -1,19 +1,13 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 1, sass/sass/_head.scss */
+
 * {
   box-sizing: border-box;
 }
 
-/* line 5, sass/sass/_head.scss */
 body {
   font-size: 1rem;
   font-family: 'Tahoma', sans-serif;
 }
 
-/* line 18, sass/sass/_head.scss */
 h1 {
   margin: 0;
   line-height: 1.2em;
@@ -22,7 +16,6 @@ h1 {
   font-weight: 900;
 }
 
-/* line 26, sass/sass/_head.scss */
 h2 {
   text-align: center;
   font-size: 1.75rem;
@@ -32,52 +25,41 @@ h2 {
 }
 
 /*  Misc */
-/* line 37, sass/sass/_head.scss */
 .big-v {
   font-size: 1.5em;
   line-height: .5em;
 }
 
-/* line 41, sass/sass/_head.scss */
 strong {
   font-weight: 900;
 }
 
 /*  Hover and focus effects */
-/* 1. Buttons and button-like links */
-/* line 47, sass/sass/_head.scss */
 button:hover, button:focus {
   background-color: #FFF8DC;
   box-shadow: 5px 5px 2px 1px #999;
 }
 
-/* 2. Spans around radio buttons. */
-/* line 1, sass/sass/_main.scss */
 main {
   margin: 0 auto;
   padding: 0 1% 2rem;
 }
-/* line 8, sass/sass/_main.scss */
+
 main h2 {
   line-height: 1.2em;
 }
-/* line 12, sass/sass/_main.scss */
+
 main form {
   margin: 25px 0;
   text-align: center;
 }
-/* line 17, sass/sass/_main.scss */
-main legend {
-  margin: 0 0 10px 0;
-}
-/* line 21, sass/sass/_main.scss */
-main fieldset {
-  border: none;
+
+main form #search-words {
+  width: 50%;
+  max-width: 40em;
 }
 
-/* Form on Start page */
 /*  Default style for buttons */
-/* line 34, sass/sass/_main.scss */
 button {
   background-color: #eee8c0;
   font-weight: 900;
@@ -88,9 +70,30 @@ button {
   box-shadow: 5px 5px 2px 1px gray;
 }
 
-/*  Button on Start page */
-/*  Buttons other than the one on Start page and links that act like buttons */
-/*  .info used on Questions page  */
-/*  Questions page and Recap page */
-/*  Questions and Recap pages */
-/* "Button" link on summary page to start over from beginning */
+figure {
+  border-bottom: none;
+  background-color: #eee;
+  margin: 8px 0;
+  padding: 0;
+  width: 100%;
+}
+
+figure figcaption {
+  width: 100%;
+}
+
+figure img {
+  display: block;
+  margin-top: 4px;
+  width: 100%;
+}
+
+figure figcaption {
+  display: block;
+  font-size: .9rem;
+  height: 3.8em;
+  margin: 0;
+  padding: 3px;
+  display: block;
+  overflow: hidden;
+}
