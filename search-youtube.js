@@ -22,7 +22,7 @@ function getDataYouTubeAPI(searchTerm, callback, nextPageToken) {  // second
   }
   if (nextPageToken) {
    query.pageToken = nextPageToken;
-  }
+ }
 
   $.getJSON("https://www.googleapis.com/youtube/v3/search", query, callback);
 }
@@ -49,6 +49,14 @@ function displayYouTubeData(data) {  // third
     $('.js-results').append(results.join(""));
     $('#js-search-terms').html(searchTerms);
     $('#js-next-page').html(data.nextPageToken);
+
+    // Hide next page link if there is no next page
+    if (data.pageInfo.totalResults > pageCnt * 12) {
+      $('#js-next-page-link').prop('hidden', false);
+    } else {
+      $('#js-next-page-link').prop('hidden', true);
+    }
+
     $('#js-page-count').html(++pageCnt);
   }
 }
