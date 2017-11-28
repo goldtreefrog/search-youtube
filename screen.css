@@ -70,6 +70,15 @@ button {
   box-shadow: 5px 5px 2px 1px gray;
 }
 
+.page-links {
+  max-width: 1000px;
+  margin: 5px auto;
+}
+.page-links a {
+  display: block;
+  float: right;
+}
+
 /* Total results line */
 .js-total {
   width: 100%;
