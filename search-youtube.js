@@ -1,5 +1,5 @@
 // Use YouTube API to return thumbnails of videos that match the user-supplied keywords.
-// by Margaret Blauvelt, 23 Nov 2017
+// by Margaret Blauvelt, 23 Nov 2017. Last update: 28 Nov 2017.
 //
 // See API Documentation: https://developers.google.com/youtube/
 // Sample JSON: https://www.googleapis.com/youtube/v3/search?q=cats&key=AIzaSyCdEauiUNN9xGf7BLWzeL0jGm2SF9TUw2s&part=snippet
@@ -29,19 +29,20 @@ function displayYouTubeData(data) {  // third
   console.log("Made it to displayYouTubeData");
   console.log(data.kind);  // youtube#searchListResponse
   console.log(data.pageInfo);  // {totalResults: 1000000, resultsPerPage: 5}
-  console.log(data.pageInfo.totalResults);
-  console.log("Start data.items[0]");
-  console.log(data.items[0]);
-  console.log("End data.items[0]");
-  console.log("start data.items[0].id");
-  console.log(data.items[0].id);
-  console.log("end data.items[0].id");
-  console.log("start data.items[0].id.videoId");
-  console.log(data.items[0].id.videoId);
-  console.log("end data.items[0].id.videoId");
-  console.log("The image url follows");
-  console.log(data.items[0].snippet.thumbnails.high.url);
-
+  console.log(data.pageInfo.totalResults);  // mjb Add to user page
+  if (data.pageInfo.totalResults != 0) {
+    console.log("Start data.items[0]");
+    console.log(data.items[0]);
+    console.log("End data.items[0]");
+    console.log("start data.items[0].id");
+    console.log(data.items[0].id);
+    console.log("end data.items[0].id");
+    console.log("start data.items[0].id.videoId");
+    console.log(data.items[0].id.videoId);
+    console.log("end data.items[0].id.videoId");
+    console.log("The image url follows");
+    console.log(data.items[0].snippet.thumbnails.high.url);
+  }
   const results = data.items.map(function(item) {
     let itemHtml = renderResult(item, cnt);   // One video at a time
     cnt += 1;
@@ -51,7 +52,14 @@ function displayYouTubeData(data) {  // third
   console.log("HTML results:");
   console.log(results);
   console.log("End HTML results");
-  $('.js-results').html(results.join(""));
+  // $('.js-result-area').prop('hidden', false);
+  if (data.pageInfo.totalResults === 0) {
+    $('.js-results').html('<div class="js-total">No videos match the search criteria you entered. Please try again.</div>');
+  } else {
+     // .toLocaleStrong()  (below) may not yet work in all browsers to insert comma separators, but apparently the worst thing that will happen is nothing at all.
+    $('.js-results').html(`<div class="js-total">Showing 1 to ${cnt} of ${data.pageInfo.totalResults.toLocaleString()} total results:</div>`);
+    $('.js-results').append(results.join(""));
+  }
 }
 
 // Function: renderResult

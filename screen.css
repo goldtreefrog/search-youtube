@@ -70,6 +70,13 @@ button {
   box-shadow: 5px 5px 2px 1px gray;
 }
 
+/* Total results line */
+.js-total {
+  width: 100%;
+  text-align:center;
+  margin-bottom: 15px;
+}
+
 figure {
   border-bottom: none;
   background-color: #eee;
