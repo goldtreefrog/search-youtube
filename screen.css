@@ -66,7 +66,7 @@ button {
   padding: 0.25em;
   font-size: 1.25em;
   border: solid 2px gray;
-  border-radius: 30%;
+  border-radius: 15px;
   box-shadow: 5px 5px 2px 1px gray;
 }
 
